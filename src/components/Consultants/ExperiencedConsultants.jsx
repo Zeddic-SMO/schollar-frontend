@@ -9,7 +9,7 @@ import rating5 from "../../assets/media/icons/Home/Consultants/icons/rating5.png
 const ExperiencedConsultants = () => {
   return (
     <div className="px-10 md:px-40 py-10">
-      <div className="flex justify-between py-10 ">
+      <div className="flex justify-between items-center py-10 ">
         <h1 className="font-ManropeExtraBold text-[25px] md:text-[35px]">
           Experienced Consultants
         </h1>
