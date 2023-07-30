@@ -1,4 +1,5 @@
 import ExperiencedConsultants from "../Consultants/ExperiencedConsultants";
+import FAQ from "./FAQ";
 import HeroSection from "./HeroSection";
 import SchollarFeaturesSection from "./SchollarFeaturesSection";
 import SchollarVisionSection from "./SchollarVisionSection";
@@ -14,6 +15,7 @@ const Home = () => {
       <ExperiencedConsultants />
       <TestimoniesSection />
       <TrustedPartnersSection />
+      <FAQ />
     </div>
   );
 };
