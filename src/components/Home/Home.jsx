@@ -1,5 +1,5 @@
 import ExperiencedConsultants from "../Consultants/ExperiencedConsultants";
-import FAQ from "./FAQ";
+import FAQ from "./FAQ/FAQ";
 import HeroSection from "./HeroSection";
 import SchollarFeaturesSection from "./SchollarFeaturesSection";
 import SchollarVisionSection from "./SchollarVisionSection";

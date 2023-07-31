@@ -14,7 +14,11 @@ const HeroSection = () => {
           for all your Study Abroad Queries
         </h1>
         <div className="block md:hidden">
-          <img src={HeroLarge} alt="connecting" className="w-[300px]" />
+          <img
+            src={HeroLarge}
+            alt="connecting"
+            className="w-[300px] mx-auto py-3"
+          />
         </div>
         <p className="text-[16px] font-ManropeRegular py-3">
           Access a pool of experienced consultants, resources and community of
