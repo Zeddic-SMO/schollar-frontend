@@ -1,5 +1,6 @@
 import ExperiencedConsultants from "../Consultants/ExperiencedConsultants";
 import Footer from "../Navigation/Footer";
+import Header from "../Navigation/Header";
 import BookSession from "./BookSession";
 import FAQ from "./FAQ/FAQ";
 import HeroSection from "./HeroSection";
@@ -11,6 +12,7 @@ import TrustedPartnersSection from "./TrustedPartnersSection";
 const Home = () => {
   return (
     <div className="bg-white">
+      <Header />
       <HeroSection />
       <SchollarFeaturesSection />
       <SchollarVisionSection />
