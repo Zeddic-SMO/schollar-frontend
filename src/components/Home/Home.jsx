@@ -1,4 +1,5 @@
 import ExperiencedConsultants from "../Consultants/ExperiencedConsultants";
+import Footer from "../Navigation/Footer";
 import BookSession from "./BookSession";
 import FAQ from "./FAQ/FAQ";
 import HeroSection from "./HeroSection";
@@ -18,6 +19,7 @@ const Home = () => {
       <TrustedPartnersSection />
       <FAQ />
       <BookSession />
+      <Footer />
     </div>
   );
 };
