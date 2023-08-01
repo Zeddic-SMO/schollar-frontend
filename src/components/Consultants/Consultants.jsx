@@ -5,12 +5,18 @@ import { Home, ChevronsRight, Search } from "react-feather";
 import searchBtn from "../../assets/media/icons/Home/Search_Btn.png";
 import ExperiencedConsultants from "./ExperiencedConsultants";
 import DontMissAnything from "../Elements/DontMissAnything";
+import cover from "../../assets/media/images/consultants/cover.png";
 
 const Consultants = () => {
   return (
     <div>
       <Header />
-      <div className="px-10 md:px-40 py-10 h-[500px] bg-hero bg-no-repeat bg-cover bg-center">
+      <div
+        className="px-10 md:px-40 py-10 h-[500px] bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${cover})`,
+        }}
+      >
         <div className="flex text-BrandGray500 text-[14px] items-center gap-2">
           <Link to="/">
             <div className="flex items-center gap-1 cursor-pointer hover:underline">
