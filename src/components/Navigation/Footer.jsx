@@ -1,9 +1,10 @@
 import logo from "../../assets/media/logo/logo.png";
+import { Mail } from "react-feather";
 
 const Footer = () => {
   return (
     <div className="px-10 md:px-40 py-10 bg-BrandGray900">
-      <div className="flex gap-10">
+      <div className="flex flex-col md:flex-row gap-10">
         <div>
           <img src={logo} alt="logo" className="py-5" />
           <p className="text-[14px] font-ManropeRegular text-BrandGray400">
@@ -18,12 +19,14 @@ const Footer = () => {
           <h6 className="text-[14px] font-ManropeSemiBold text-white pt-10 py-3">
             Subscribe to our newsletter
           </h6>
-          <div className="items-center inline-flex border-[1px] border-BrandGray700 rounded-lg">
-            <span></span>
+          <div className=" inline-flex items-center border-[1px] border-BrandGray700 rounded-lg">
+            <span className="text-BrandGray400 px-2">
+              <Mail />
+            </span>
             <input
               type="email"
               placeholder="Your Email"
-              className="font-ManropeRegular p-2 rounded-l-lg outline-none text-[15px] bg-transparent w-[310px]"
+              className="font-ManropeRegular p-2 rounded-l-lg outline-none text-[15px] bg-transparent w-[200px] md:w-[310px] text-BrandGray500"
             />
             <button className="text-white bg-BrandPrimary rounded-r-lg p-2">
               Subscribe

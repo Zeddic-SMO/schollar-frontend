@@ -19,7 +19,11 @@ export default {
         BrandGray700: "#565973",
         BrandGray500: "#B4B7C9",
         BrandGray400: "#D4D7E5",
+        BrandGray100: "#f3f6ff",
         BrandHover: "#c1c4fa",
+      },
+      backgroundImage: {
+        hero: "url('./src/assets/media/images/consultants/cover.png')",
       },
     },
   },
