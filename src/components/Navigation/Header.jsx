@@ -32,7 +32,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex gap-5 items-center font-ManropeRegular text-[12px]">
-        <Link to="/sign_in">
+        <Link to="/signin">
           <div className="border border-BrandPrimary flex items-center py-1 px-3 gap-1 rounded-md cursor-pointer">
             <span>
               <img src={sign_in} alt="sign in" className="w-[15px]" />
@@ -40,7 +40,7 @@ const Header = () => {
             <span>Sign in</span>
           </div>
         </Link>
-        <Link to="/sign_up">
+        <Link to="/signup">
           <div className="border bg-BrandPrimary flex items-center py-1 px-3 text-white gap-1 rounded-md cursor-pointer">
             <span>
               <img src={sign_up} alt="sign in" className="w-[10px]" />

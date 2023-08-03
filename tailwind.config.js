@@ -25,6 +25,9 @@ export default {
       backgroundImage: {
         hero: "url('./src/assets/media/images/consultants/cover.png')",
       },
+      height: {
+        calc: "calc(100%-60px)",
+      },
     },
   },
   plugins: [],
