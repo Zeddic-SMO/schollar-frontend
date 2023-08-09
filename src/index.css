@@ -4,8 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 #authTemplate {
-  height: calc(100% - 68px);
+  /* height: calc(100% - 68px); */
+  height: 100%;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
