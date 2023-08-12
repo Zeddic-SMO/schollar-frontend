@@ -4,6 +4,7 @@ import Consultants from "./components/Consultants/Consultants";
 import SignIn from "./components/Authentication/SignIn";
 import SignUp from "./components/Authentication/SignUp";
 import Contact from "./components/Contact/Contact";
+import NotFound from "./components/NotFound/NotFound";
 
 const NavRoutes = () => {
   return (
@@ -17,6 +18,9 @@ const NavRoutes = () => {
 
       {/* contact page */}
       <Route path="/contact" element={<Contact />} />
+
+      {/* Not found - 404 */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

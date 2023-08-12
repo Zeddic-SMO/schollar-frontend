@@ -12,7 +12,7 @@ import {
 
 const Contact = () => {
   return (
-    <div className="bg-[#f3effe] ">
+    <div className="bg-[#f3effe]">
       <Header />
       <div className=" px-10 md:px-40 py-20">
         <div className="flex text-BrandGray500 text-[14px] items-center gap-2">
@@ -42,16 +42,16 @@ const Contact = () => {
               Let's talk!
             </h1>
             <div className="flex gap-2 pt-5">
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
                 <Facebook size="15px" />
               </span>
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
                 <Twitter size="15px" />
               </span>
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
                 <Linkedin size="15px" />
               </span>
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
                 <Instagram size="15px" />
               </span>
             </div>
