@@ -7,6 +7,8 @@
 * {
   box-sizing: border-box;
 }
+#heroBg {
+}
 
 #authTemplate {
   /* height: calc(100% - 68px); */
@@ -14,4 +16,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+#contact_lets_talk {
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 20%, #d946ef 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

@@ -4,7 +4,10 @@ import students from "../../assets/media/icons/Home/Hero_Sm.png";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#f3effe] md:h-[600px] w-full px-10 md:px-40 py-20 flex items-center">
+    <div
+      id="heroBg"
+      className="bg-[#f3effe] md:h-[600px] w-full px-10 md:px-40 py-20 flex items-center"
+    >
       <div className="w-full md:w-[80%]">
         <h6 className="font-ManropeBold text-[14px] md:text-[20px]">
           Welcome!

@@ -20,6 +20,7 @@ export default {
         BrandGray600: "#9397AD",
         BrandGray500: "#B4B7C9",
         BrandGray400: "#D4D7E5",
+        BrandGray300: "#E2E5F1",
         BrandGray200: "#EFF2FC",
         BrandGray100: "#f3f6ff",
         BrandHover: "#c1c4fa",
