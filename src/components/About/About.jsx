@@ -199,6 +199,11 @@ const About = () => {
 
       <div className="px-10 md:px-40 py-14 ">
         <div className="bg-BrandGray100 py-5 px-10 rounded-xl h-[420px] relative">
+          <img
+            src={shape}
+            alt=""
+            className="absolute bottom-0 right-0 w-[350px]"
+          />
           <div className="py-14 flex flex-col md:flex-row gap-10">
             <div className="md:w-1/3">
               <h3 className="font-ManropeBold text-[18px] md:text-[20px] text-BrandGray700">
@@ -208,7 +213,7 @@ const About = () => {
                 Don't Hesitate to Contact Us
               </h1>
             </div>
-            <div className="md:w-2/3 z-40">
+            <div className="md:w-2/3 z-10">
               <div className="flex gap-2 mb-5">
                 <div className="w-1/2 z-50">
                   <label
@@ -257,11 +262,6 @@ const About = () => {
                   Send Request
                 </button>
               </div>
-              <img
-                src={shape}
-                alt=""
-                className="absolute bottom-0 right-0 w-[350px] z-20"
-              />
             </div>
           </div>
         </div>
