@@ -3,6 +3,12 @@ import logo from "../../assets/media/logo/logo.png";
 import { Mail } from "react-feather";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use 'auto' for instant scrolling
+    });
+  };
   return (
     <div className="px-10 md:px-40 py-10 bg-BrandGray900">
       <div className="flex flex-col md:flex-row gap-10">
@@ -36,7 +42,9 @@ const Footer = () => {
         </div>
         <div className="text-white flex flex-col mt-10 gap-3 md:ml-14">
           <span className="hover:text-BrandPrimary cursor-pointer">
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={scrollToTop}>
+              About
+            </Link>
           </span>
           <span className="hover:text-BrandPrimary cursor-pointer">
             Features
@@ -76,7 +84,9 @@ const Footer = () => {
 
         <div className="text-white mt-10 flex flex-col gap-5">
           <span>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" onClick={scrollToTop}>
+              Contact Us
+            </Link>
           </span>
           <span className="text-BrandPrimary cursor-pointer">
             hello@schollar.com
