@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/media/logo/logo.png";
 import { Mail } from "react-feather";
 
@@ -34,7 +35,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-white flex flex-col mt-10 gap-3 md:ml-14">
-          <span className="hover:text-BrandPrimary cursor-pointer">About</span>
+          <span className="hover:text-BrandPrimary cursor-pointer">
+            <Link to="/about">About</Link>
+          </span>
           <span className="hover:text-BrandPrimary cursor-pointer">
             Features
           </span>
@@ -72,7 +75,9 @@ const Footer = () => {
         </div>
 
         <div className="text-white mt-10 flex flex-col gap-5">
-          <span>Contact Us</span>
+          <span>
+            <Link to="/contact">Contact Us</Link>
+          </span>
           <span className="text-BrandPrimary cursor-pointer">
             hello@schollar.com
           </span>
