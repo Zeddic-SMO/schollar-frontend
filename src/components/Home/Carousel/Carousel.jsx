@@ -19,26 +19,26 @@ const Carousel = ({ autoSlide = false, autoSlideInterval = 3000, slides }) => {
   return (
     <div className="overflow-hidden relative">
       <div
-        className="flex transition-transform ease-out duration-500"
+        className="flex transition-transform ease-out duration-500 s-20"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides?.map((testimony) => (
           <Testimony testimony={testimony} key={testimony.id} />
         ))}
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-4">
-        <div className="absolute top-0 right-0">
+      <div className="absolute inset-0 flex items-center justify-between p-4 z-20">
+        <div className="absolute top-0 right-0 flex gap-2">
           <button
             onClick={prev}
             className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
           >
-            <ChevronLeft size={40} />
+            <ChevronLeft size={30} />
           </button>
           <button
             onClick={next}
             className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
           >
-            <ChevronRight size={40} />
+            <ChevronRight size={30} />
           </button>
         </div>
       </div>

@@ -42,16 +42,16 @@ const Contact = () => {
               Let's talk!
             </h1>
             <div className="flex gap-2 pt-5">
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary hover:text-white">
                 <Facebook size="15px" />
               </span>
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary hover:text-white">
                 <Twitter size="15px" />
               </span>
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary hover:text-white">
                 <Linkedin size="15px" />
               </span>
-              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary">
+              <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary hover:text-white">
                 <Instagram size="15px" />
               </span>
             </div>

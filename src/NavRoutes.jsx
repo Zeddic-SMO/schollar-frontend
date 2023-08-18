@@ -6,12 +6,14 @@ import SignUp from "./components/Authentication/SignUp";
 import Contact from "./components/Contact/Contact";
 import NotFound from "./components/NotFound/NotFound";
 import About from "./components/About/About";
+import Features from "./components/Features/Features";
+import Opportunities from "./components/Opportunities/Opportunities";
+import ConsultantOverview from "./components/ConsultantDetailsAndBooking/ConsultantOverview";
 
 const NavRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/consultants" element={<Consultants />} />
 
       {/* Authentication Routes */}
       <Route path="/signin" element={<SignIn />} />
@@ -22,6 +24,21 @@ const NavRoutes = () => {
 
       {/* About Us Page */}
       <Route path="/about" element={<About />} />
+
+      {/* Consultants Listing */}
+      <Route path="/consultants" element={<Consultants />} />
+
+      {/* About a consultant and booking */}
+      <Route
+        path="/consultants/:consultant_Id"
+        element={<ConsultantOverview />}
+      />
+
+      {/* Features pages */}
+      <Route path="/features" element={<Features />} />
+
+      {/* Opportunities pages */}
+      <Route path="/opportuities" element={<Opportunities />} />
 
       {/* Not found - 404 */}
       <Route path="*" element={<NotFound />} />

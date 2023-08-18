@@ -5,7 +5,7 @@ import sign_up from "../../assets/media/icons/Header/sign_up.png";
 
 const Header = () => {
   return (
-    <div className="px-10 md:px-40 py-4 md:h-[60px] bg-white flex flex-col md:flex-row justify-between items-center">
+    <div className="px-10 md:px-40 py-4 md:h-[60px] bg-transparent flex flex-col md:flex-row justify-between items-center">
       <div className="flex flex-col md:flex-row justify-center md:justify-normal gap-4 md:gap-10 text-BrandGray800 font-ManropeSemiBold items-center">
         <Link to="/">
           <div className="flex gap-2 justify-center md:justify-normal items-center cursor-pointer">
