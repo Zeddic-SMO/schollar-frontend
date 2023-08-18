@@ -73,4 +73,12 @@ export const servicesItems = [
     id: 1,
     name: "Admission",
   },
+  {
+    id: 2,
+    name: "Scholarship",
+  },
+  {
+    id: 3,
+    name: "Visa Application",
+  },
 ];
