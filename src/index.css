@@ -24,3 +24,18 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+/* Scrollbar */
+/* Style for Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6366f1;
+}

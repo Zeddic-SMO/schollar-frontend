@@ -4,10 +4,14 @@ import Header from "../Navigation/Header";
 import { ChevronsRight, Home } from "react-feather";
 import SideBar from "./SideBar";
 import MainSection from "./MainSection";
+import { useState } from "react";
+import Modal from "../Elements/Modal";
+import CreateOpportunities from "./CreateOpportunities";
 
 const Opportunities = () => {
+  const [Open, SetOpen] = useState(false);
   return (
-    <div className="bg-BrandGray100">
+    <div className="bg-BrandGray100 relative">
       <Header />
       <div className="px-10 md:px-40 py-14 ">
         {/* Back to Home page */}
@@ -31,9 +35,16 @@ const Opportunities = () => {
         {/* The main section */}
         <main className="flex items-center relative">
           <MainSection />
-          <SideBar />
+          <SideBar SetOpen={SetOpen} />
         </main>
       </div>
+
+      {/* Create Opportunities modal */}
+      {Open && (
+        <Modal>
+          <CreateOpportunities SetOpen={SetOpen} />
+        </Modal>
+      )}
       <Footer />
     </div>
   );

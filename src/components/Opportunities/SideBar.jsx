@@ -10,12 +10,15 @@ import {
 } from "react-feather";
 import ads_banner from "../../assets/media/images/opportunities/banner.png";
 
-const SideBar = () => {
+const SideBar = ({ SetOpen }) => {
   return (
     <div className="w-[25%]">
       <div className="absolute top-10 right-0">
         <div className="flex gap-5 justify-between">
-          <button className="flex items-center gap-1 py-1 px-2 bg-BrandPrimary rounded-lg text-white">
+          <button
+            className="flex items-center gap-1 py-1 px-2 bg-BrandPrimary rounded-lg text-white"
+            onClick={() => SetOpen(true)}
+          >
             <Plus size={16} /> Post Opportunity
           </button>
           <div className="flex items-center gap-2">
@@ -28,7 +31,7 @@ const SideBar = () => {
           <input
             type="text"
             placeholder="Search the blog..."
-            className="font-ManropeRegular text-BrandGray600 text-[14px] bg-transparent w-[90%]"
+            className="font-ManropeRegular text-BrandGray600 text-[14px] bg-transparent w-[90%] outline-none"
           />
           <Search size={18} className="cursor-pointer" />
         </div>
