@@ -29,7 +29,7 @@ const Opportunities = () => {
         </div>
 
         {/* The main section */}
-        <main className="flex items-center">
+        <main className="flex items-center relative">
           <MainSection />
           <SideBar />
         </main>

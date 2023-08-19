@@ -20,7 +20,7 @@ export const opportunitiesItems = [
 
   {
     id: 2,
-    tag: "Admssion",
+    tag: "Admission",
     img: ThisWeek,
     title: "This Week in Search: New Limits and Exciting Features",
     text: "Aliquet donec cras amet orci in in neque. Ut sed diam quis consectetur purus lorem eu, sit. Aliquam eget arcu sed urna feugiat. In integer nisl at dui malesuada. Diam pellentesque lobortis elementum lacus.",
