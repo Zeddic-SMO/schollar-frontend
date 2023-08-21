@@ -1,12 +1,19 @@
 import CAT from "../../assets/media/icons/Home/CATbtn.png";
-import Darrell from "../../assets/media/icons/Home/Consultants/Darrel.png";
-import Esther from "../../assets/media/icons/Home/Consultants/Esther.png";
-import Jerome from "../../assets/media/icons/Home/Consultants/Jerome.png";
-import Ralph from "../../assets/media/icons/Home/Consultants/Ralph.png";
-import rating4 from "../../assets/media/icons/Home/Consultants/icons/rating4.png";
-import rating5 from "../../assets/media/icons/Home/Consultants/icons/rating5.png";
+import star from "../../assets/media/icons/Home/Consultants/icons/star.png";
+import view from "../../assets/media/icons/Home/Consultants/icons/view.png";
+import chat from "../../assets/media/icons/Home/Consultants/icons/chat.png";
+import video from "../../assets/media/icons/Home/Consultants/icons/video.png";
+
+import { ConsultantsInfo } from "./ConsultantsData";
+import { Link } from "react-router-dom";
 
 const ExperiencedConsultants = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use 'auto' for instant scrolling
+    });
+  };
   return (
     <div className="px-10 md:px-40 py-10">
       <div className="flex flex-col md:flex-row justify-between items-center py-10 ">
@@ -23,127 +30,75 @@ const ExperiencedConsultants = () => {
       </div>
 
       <div className="flex gap-5 justify-center flex-wrap">
-        <div className="w-[220px]">
-          <img src={Darrell} alt="Darrell" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Darrell Steward
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating4} alt="rating" />
-            </span>
-            <span>(14 reviews)</span>
-          </p>
-        </div>
-        <div className="w-[220px]">
-          <img src={Esther} alt="Esther" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Esther Howard
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating5} alt="rating" />
-            </span>
-            <span>(4 reviews)</span>
-          </p>
-        </div>
-        <div className="w-[220px]">
-          <img src={Jerome} alt="Jerome" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Jerome Bell
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating4} alt="rating" />
-            </span>
-            <span>(12 reviews)</span>
-          </p>
-        </div>
-        <div className="w-[220px]">
-          <img src={Ralph} alt="Ralph" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Ralph Edwards
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating5} alt="rating" />
-            </span>
-            <span>( reviews)</span>
-          </p>
-        </div>
-        {/* Second row */}
-        <div className="w-[220px]">
-          <img src={Darrell} alt="Darrell" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Darrell Steward
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating4} alt="rating" />
-            </span>
-            <span>(14 reviews)</span>
-          </p>
-        </div>
-        <div className="w-[220px]">
-          <img src={Esther} alt="Esther" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Esther Howard
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating5} alt="rating" />
-            </span>
-            <span>(4 reviews)</span>
-          </p>
-        </div>
-        <div className="w-[220px]">
-          <img src={Jerome} alt="Jerome" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Jerome Bell
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating4} alt="rating" />
-            </span>
-            <span>(12 reviews)</span>
-          </p>
-        </div>
-        <div className="w-[220px]">
-          <img src={Ralph} alt="Ralph" />
-          <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
-            Ralph Edwards
-          </h5>
-          <p className="text-[12px] text-center font-ManropeRegular text-BrandGray700">
-            Admission | Travel | Scholarship | Visa
-          </p>
-          <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-2">
-            <span>
-              <img src={rating5} alt="rating" />
-            </span>
-            <span>( reviews)</span>
-          </p>
-        </div>
+        {ConsultantsInfo?.map((consultant) => {
+          return (
+            <div key={consultant.id} className="cursor-pointer">
+              <div className="w-[220px]">
+                <div className="relative inline-block group">
+                  <img
+                    src={consultant.pic}
+                    alt={consultant.name}
+                    className="hover:scale-105 transition-transform duration-300 transform origin-center"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full bg-BrandPrimary bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-md">
+                    <Link
+                      to={`/consultants/` + consultant.id}
+                      onClick={scrollToTop}
+                    >
+                      <p className="absolute w-full flex justify-center items-center gap-2 bottom-5">
+                        <span>
+                          <img
+                            src={view}
+                            alt="view"
+                            className="w-[30px] shadow-lg"
+                          />
+                        </span>
+                        <span>
+                          <img
+                            src={chat}
+                            alt="view"
+                            className="w-[30px] shadow-lg"
+                          />
+                        </span>
+                        <span>
+                          <img
+                            src={video}
+                            alt="view"
+                            className="w-[30px] shadow-lg"
+                          />
+                        </span>
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+
+                <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
+                  {consultant.name}
+                </h5>
+                <p className="flex gap-2 justify-center">
+                  {consultant.specialization.map((item, i) => {
+                    return (
+                      <span
+                        key={i}
+                        className="text-[14px] font-ManropeRegular text-BrandGray700"
+                      >
+                        {item}
+                      </span>
+                    );
+                  })}
+                </p>
+                <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-1">
+                  {consultant.reviews.map((review, i) => (
+                    <span key={i} className="mx-[-6px]">
+                      <img src={star} alt="rating" className="w-[13px]" />
+                    </span>
+                  ))}
+                  <span>{consultant.reviews.length + " reviews"}</span>
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

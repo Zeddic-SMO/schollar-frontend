@@ -30,7 +30,7 @@ const NavRoutes = () => {
 
       {/* About a consultant and booking */}
       <Route
-        path="/consultants/:consultant_Id"
+        path="/consultants/:consultantId"
         element={<ConsultantOverview />}
       />
 

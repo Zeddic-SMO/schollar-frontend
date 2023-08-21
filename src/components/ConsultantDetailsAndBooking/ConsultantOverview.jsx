@@ -1,9 +1,22 @@
 import Header from "../Navigation/Header";
 import Footer from "../Navigation/Footer";
-import { Link } from "react-router-dom";
-import { ChevronsRight, Home } from "react-feather";
+import { Link, useParams } from "react-router-dom";
+import { ChevronsRight, Home, MapPin } from "react-feather";
+import { ConsultantsInfo } from "../Consultants/ConsultantsData.js";
+import { useEffect, useState } from "react";
+import star from "../../assets/media/icons//Home/Consultants/icons/star.png";
 
 const ConsultantOverview = () => {
+  const { consultantId } = useParams();
+  const [consultant, setConsultant] = useState(null);
+
+  useEffect(() => {
+    const selectedConsultant = ConsultantsInfo.find(
+      (consultant) => consultant.id === parseInt(consultantId)
+    );
+    setConsultant(selectedConsultant);
+  }, [consultantId]);
+
   return (
     <>
       <Header />
@@ -33,8 +46,33 @@ const ConsultantOverview = () => {
           </span>
 
           <span className="font-ManropeRegular cursor-pointer text-BrandGray800 ">
-            Name
+            {consultant?.name}
           </span>
+        </div>
+
+        <div className="flex mt-12">
+          <div className="w-[220px]">
+            <img src={consultant?.pic} alt={consultant?.name} />
+            <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
+              {consultant?.name}
+            </h5>
+            <p className="flex text-[11px] font-ManropeRegular text-BrandGray500 gap-3 justify-center py-1">
+              {consultant?.reviews.map((review, i) => (
+                <span key={i} className="mx-[-6px]">
+                  <img src={star} alt="rating" className="w-[13px]" />
+                </span>
+              ))}
+              <span>{consultant?.reviews.length + " reviews"}</span>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <MapPin size={20} className="text-BrandPrimary" />{" "}
+              <span className="font-ManropeSemiBold text-BrandGray900">
+                {" "}
+                {consultant?.location}
+              </span>
+            </p>
+          </div>
+          <div></div>
         </div>
       </div>
       <Footer />
