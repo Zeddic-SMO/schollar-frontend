@@ -93,7 +93,14 @@ const ExperiencedConsultants = () => {
                       <img src={star} alt="rating" className="w-[13px]" />
                     </span>
                   ))}
-                  <span>{consultant.reviews.length + " reviews"}</span>
+                  <Link
+                    to={`/consultants/` + consultant.id}
+                    onClick={scrollToTop}
+                  >
+                    <span className="hover:text-BrandPrimary">
+                      {consultant.reviews.length + " reviews"}
+                    </span>
+                  </Link>
                 </p>
               </div>
             </div>

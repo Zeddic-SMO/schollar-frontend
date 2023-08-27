@@ -1,7 +1,4 @@
 import quotes from "../../../assets/media/icons/Home/quotes.png";
-import facebook from "../../../assets/media/icons/Home/fb.png";
-import instagram from "../../../assets/media/icons/Home/instagram.png";
-import twitter from "../../../assets/media/icons/Home/twitter.png";
 
 const Testimony = ({ testimony }) => {
   console.log(testimony);
@@ -26,27 +23,10 @@ const Testimony = ({ testimony }) => {
             <span className="text-[16px] font-ManropeBold text-BrandGray700">
               {testimony?.name}
             </span>
-            <span className="text-BrandGray700 font-ManropeRegular">
+            <span className="text-BrandGray700 font-ManropeRegular text-[14px]">
               {testimony?.headline}
             </span>
           </div>
-        </div>
-        <div className="flex gap-2">
-          <img
-            src={facebook}
-            alt="facebook"
-            className="w-[30px] h-[30px] cursor-pointer"
-          />
-          <img
-            src={twitter}
-            alt="twitter"
-            className="w-[30px] h-[30px] cursor-pointer"
-          />
-          <img
-            src={instagram}
-            alt="instagram"
-            className="w-[30px] h-[30px] cursor-pointer"
-          />
         </div>
       </div>
     </div>

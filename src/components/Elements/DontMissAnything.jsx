@@ -42,7 +42,6 @@ const DontMissAnything = () => {
                 type="checkbox"
                 id="Advertising_Updates"
                 value="Advertising Updates"
-                checked
               />
               <label htmlFor="Advertising_Updates">Advertising Updates</label>
             </div>

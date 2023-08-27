@@ -47,10 +47,12 @@ const Footer = () => {
             </Link>
           </span>
           <span className="hover:text-BrandPrimary cursor-pointer">
-            Features
+            <Link to="/features" onClick={scrollToTop}>
+              Features
+            </Link>
           </span>
           <span className="hover:text-BrandPrimary cursor-pointer">
-            Why Scholar
+            Why Schollar
           </span>
           <span className="hover:text-BrandPrimary cursor-pointer">
             Careers
@@ -80,6 +82,9 @@ const Footer = () => {
           <span className="hover:text-BrandPrimary cursor-pointer">
             Instagram
           </span>
+          <span onClick={scrollToTop}>
+            <Link to="/dashboard/schollar">Schollar Dashboard</Link>
+          </span>
         </div>
 
         <div className="text-white mt-10 flex flex-col gap-5">
@@ -89,7 +94,7 @@ const Footer = () => {
             </Link>
           </span>
           <span className="text-BrandPrimary cursor-pointer">
-            hello@schollar.com
+            hello@schollar.net
           </span>
         </div>
       </div>

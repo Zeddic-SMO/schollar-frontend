@@ -13,7 +13,7 @@ const SchollarFeaturesSection = () => {
       <h1 className="py-10 font-ManropeExtraBold text-center text-[25px] md:text-[35px]">
         Schollar Features
       </h1>
-      <div className="flex gap-4 flex-wrap justify-center">
+      <div className="flex gap-4 flex-wrap justify-center items-center">
         <div className="flex flex-col items-center w-[220px] py-2 cursor-pointer">
           <img src={forum} alt="forum" />
           <h5 className="py-3 font-ManropeBold text-[20px]">Forum</h5>

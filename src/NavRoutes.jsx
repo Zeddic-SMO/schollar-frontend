@@ -9,6 +9,8 @@ import About from "./components/About/About";
 import Features from "./components/Features/Features";
 import Opportunities from "./components/Opportunities/Opportunities";
 import ConsultantOverview from "./components/ConsultantDetailsAndBooking/ConsultantOverview";
+import ConsultantDashboard from "./components/Dashboard/ConsultantDashboard/ConsultantDashboard";
+import SchollarDashboard from "./components/Dashboard/ScholarDashboard/SchollarDashboard";
 
 const NavRoutes = () => {
   return (
@@ -39,6 +41,12 @@ const NavRoutes = () => {
 
       {/* Opportunities pages */}
       <Route path="/opportuities" element={<Opportunities />} />
+
+      {/* Consultant Dashboard*/}
+      <Route path="/dashboard/consultant" element={<ConsultantDashboard />} />
+
+      {/* Schollar Dashboard*/}
+      <Route path="/dashboard/schollar" element={<SchollarDashboard />} />
 
       {/* Not found - 404 */}
       <Route path="*" element={<NotFound />} />

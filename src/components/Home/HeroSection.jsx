@@ -3,6 +3,19 @@ import searchBtn from "../../assets/media/icons/Home/Search_Btn.png";
 import students from "../../assets/media/icons/Home/Hero_Sm.png";
 
 const HeroSection = () => {
+  const application = [
+    "Admissions",
+    "Scholarships",
+    "Visa",
+    "Travel",
+    "Loans",
+    "Immigration",
+  ];
+
+  const program = ["PhD", "MSc", "Bachelors"];
+
+  const country = ["United States", "Canada", "UK", "Australia", "Germany"];
+
   return (
     <div
       id="heroBg"
@@ -37,9 +50,13 @@ const HeroSection = () => {
               <option selected disabled>
                 Application
               </option>
-              <option value="Admissions">Admissions</option>
-              <option value="Visa">Visa</option>
-              <option value="Travel">Travel</option>
+              {application.map((item, i) => {
+                return (
+                  <option key={i} value={item} className="text-[15px]">
+                    {item}
+                  </option>
+                );
+              })}
             </select>
 
             <select
@@ -50,9 +67,13 @@ const HeroSection = () => {
               <option selected disabled>
                 Program
               </option>
-              <option value="Phd">Phd</option>
-              <option value="MSC">MSC</option>
-              <option value="BSC">BSC</option>
+              {program.map((item, i) => {
+                return (
+                  <option key={i} value={item}>
+                    {item}
+                  </option>
+                );
+              })}
             </select>
 
             <select
@@ -63,9 +84,13 @@ const HeroSection = () => {
               <option selected disabled>
                 Country
               </option>
-              <option value="USA">USA</option>
-              <option value="Canada">Canada</option>
-              <option value="UK">UK</option>
+              {country.map((item, i) => {
+                return (
+                  <option key={i} value={item}>
+                    {item}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <span>

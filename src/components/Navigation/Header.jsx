@@ -21,13 +21,13 @@ const Header = () => {
             <span className="hover:text-BrandPrimary">Consultants</span>
           </Link>
           <Link to="/features">
-            <span>Features</span>
+            <span className="hover:text-BrandPrimary">Features</span>
           </Link>
           <Link to="/opportuities">
-            <span>Opportunities</span>
+            <span className="hover:text-BrandPrimary">Opportunities</span>
           </Link>
           <Link to="/contact">
-            <span>Contact</span>
+            <span className="hover:text-BrandPrimary">Contact</span>
           </Link>
         </div>
       </div>

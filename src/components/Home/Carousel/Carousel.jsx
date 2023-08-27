@@ -30,15 +30,15 @@ const Carousel = ({ autoSlide = false, autoSlideInterval = 3000, slides }) => {
         <div className="absolute top-0 right-0 flex gap-2">
           <button
             onClick={prev}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            className="p-1 rounded-full shadow-xl bg-white/80 text-gray-800 hover:bg-white"
           >
-            <ChevronLeft size={30} />
+            <ChevronLeft size={20} />
           </button>
           <button
             onClick={next}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            className="p-1 rounded-full shadow-xl bg-white/80 text-gray-800 hover:bg-white"
           >
-            <ChevronRight size={30} />
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>
