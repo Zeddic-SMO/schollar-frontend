@@ -18,6 +18,7 @@ import Appointments from "./Appointments/Appointments";
 import { Favorite } from "./Favorite/Favorite";
 import Reviews from "./Reviews/Reviews";
 import SettingsTab from "./Settings/Settings";
+import Transactions from "./Transactions/Transactions";
 
 const SchollarDashboard = () => {
   const divRef = useRef(null);
@@ -30,7 +31,7 @@ const SchollarDashboard = () => {
       <DashboardHeader />
       <div className="px-10 md:px-40 flex">
         {/* SideBar */}
-        <div className="w-[320px] mr-10 border-r-[1.5px] border-[#E2E5F1] py-10">
+        <div className="w-[280px] mr-5 border-r-[1.5px] border-[#E2E5F1] py-10">
           {/* User image and info */}
           <div className="h-[200px] flex flex-col justify-center items-center gap-2">
             <img src={user} alt="User" className="w-[130px]" />
@@ -237,11 +238,12 @@ const SchollarDashboard = () => {
         </div>
 
         {/* Active Sections conditionally displayed */}
-        <div ref={divRef}>
+        <div ref={divRef} className="w-[700px]">
           {activeTab === "ProfileTab" && <Profile />}
           {activeTab === "CommunityTab" && <Community />}
           {activeTab === "AppointmentsTab" && <Appointments />}
           {activeTab === "FavoriteTab" && <Favorite />}
+          {activeTab === "TransactionsTab" && <Transactions />}
           {activeTab === "ReviewsTab" && <Reviews />}
           {activeTab === "SettingsTab" && <SettingsTab />}
         </div>

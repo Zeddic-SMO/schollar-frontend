@@ -14,6 +14,7 @@ export default {
       },
       colors: {
         BrandPrimary: "#6366F1",
+        BrandSecondary: "#22C55E",
         BrandGray900: "#0B0F19",
         BrandGray800: "#33354D",
         BrandGray700: "#565973",

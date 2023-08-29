@@ -1,5 +1,5 @@
 import TopBanner from "../../Elements/TopBanner";
-import Heading from "../Heading";
+import Heading from "./Heading";
 import { useState } from "react";
 import ProgressTracking from "./ProgressTracking";
 import BasicInfo from "./BasicInfo";
