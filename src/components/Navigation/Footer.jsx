@@ -82,8 +82,17 @@ const Footer = () => {
           <span className="hover:text-BrandPrimary cursor-pointer">
             Instagram
           </span>
-          <span onClick={scrollToTop}>
-            <Link to="/dashboard/schollar">Schollar Dashboard</Link>
+          <span
+            onClick={scrollToTop}
+            className="hover:text-BrandPrimary cursor-pointer"
+          >
+            <Link to="/dashboard/schollar">Schollar-Dashboard</Link>
+          </span>
+          <span
+            onClick={scrollToTop}
+            className="hover:text-BrandPrimary cursor-pointer"
+          >
+            <Link to="/dashboard/consultant">Consultant-Dashboard</Link>
           </span>
         </div>
 
