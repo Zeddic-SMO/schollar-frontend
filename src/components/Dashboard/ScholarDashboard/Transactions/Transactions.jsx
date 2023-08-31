@@ -9,7 +9,16 @@ const Transactions = () => {
         <h1 className="font-ManropeBold text-[32px] text-BrandGray900">
           Transactions
         </h1>
-        <div className="flex gap-3 text-red-500 border border-red-200 items-center rounded-md px-2 py-1 cursor-pointer hover:bg-red-400 hover:text-white"></div>
+        <div className="flex gap-3 text-BrandGray600 border border-BrandGray400 items-center rounded-md px-2 py-1 cursor-pointer">
+          <select
+            name=""
+            id=""
+            className="px-2 py-[2px] w-[200px] font-ManropeRegular text-[16px]"
+          >
+            <option value="Published">Sort by</option>
+            <option value="Delete">Amount</option>
+          </select>
+        </div>
       </div>
 
       {/* Table */}

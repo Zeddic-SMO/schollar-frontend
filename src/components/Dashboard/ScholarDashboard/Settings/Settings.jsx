@@ -15,7 +15,6 @@ const SettingsTab = () => {
         <h1 className="font-ManropeBold text-[32px] text-BrandGray900">
           Settings
         </h1>
-        <div className="flex gap-3 text-red-500 border border-red-200 items-center rounded-md px-2 py-1 cursor-pointer hover:bg-red-400 hover:text-white"></div>
       </div>
 
       {/* Tabs */}

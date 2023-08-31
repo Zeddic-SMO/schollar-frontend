@@ -1,5 +1,7 @@
 import { Trash } from "react-feather";
 import TopBanner from "../../Elements/TopBanner";
+import favouriteData from "./favouriteData";
+import Consultant from "../../../Consultants/Consultant";
 
 export const Favorite = () => {
   return (
@@ -17,6 +19,13 @@ export const Favorite = () => {
           </span>
           <span className="font-ManropeRegular text-[16px]">Delete All</span>
         </div>
+      </div>
+
+      {/* FAvourite consultants */}
+      <div className="flex gap-5 justify-center flex-wrap my-10">
+        {favouriteData?.map((consultant) => {
+          return <Consultant consultant={consultant} key={consultant.id} />;
+        })}
       </div>
     </>
   );
