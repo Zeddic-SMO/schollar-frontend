@@ -8,7 +8,7 @@ const BankAccounts = () => {
       {/* Header */}
       <div className="flex justify-between items-center pb-10">
         <h1 className="font-ManropeBold text-[32px] text-BrandGray900">
-          Availability
+          Bank Accounts
         </h1>
         <div className="bg-BrandPrimary flex gap-3 text-white items-center rounded-md px-2 py-1">
           <span>

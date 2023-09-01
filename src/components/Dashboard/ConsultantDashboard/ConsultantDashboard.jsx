@@ -23,6 +23,7 @@ import Transactions from "../ScholarDashboard/Transactions/Transactions";
 import Reviews from "../ScholarDashboard/Reviews/Reviews";
 import SettingsTab from "../ScholarDashboard/Settings/Settings";
 import BankAccounts from "./BankAccounts/BankAccounts";
+import Footer from "../../Navigation/Footer";
 
 const ConsultantDashboard = () => {
   const divRef = useRef(null);
@@ -317,6 +318,7 @@ const ConsultantDashboard = () => {
           {activeTab == "SettingsTab" && <SettingsTab />}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

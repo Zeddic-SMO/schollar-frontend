@@ -52,6 +52,7 @@ const SettingsTab = () => {
         </span>
       </div>
 
+      {/* Components */}
       <div>
         {activeTab === "Password" && <Password />}
         {activeTab === "Notifications" && <Notification />}

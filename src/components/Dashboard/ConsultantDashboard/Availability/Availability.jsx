@@ -1,7 +1,11 @@
-import { Copy, Trash } from "react-feather";
+import { Copy } from "react-feather";
 import TopBanner from "../../Elements/TopBanner";
+import { useState } from "react";
+import Pricing from "./Pricing";
+import BussinessHours from "./BussinessHours";
 
 const Availability = () => {
+  const [activeTab, setActiveTab] = useState("Pricing");
   return (
     <>
       <TopBanner />
@@ -17,6 +21,36 @@ const Availability = () => {
             <Copy size={15} />
           </div>
         </div>
+      </div>
+
+      {/* Tabs */}
+      <div className="text-[18px] font-ManropeBold flex gap-12 border-b-2 border-BrandGray300 mb-5">
+        <span
+          className={`cursor-pointer py-5 ${
+            activeTab == "Pricing"
+              ? ` text-BrandPrimary `
+              : `text-BrandGray600 hover:text-BrandPrimary`
+          }`}
+          onClick={() => setActiveTab("Pricing")}
+        >
+          Pricing
+        </span>
+        <span
+          className={`cursor-pointer py-5 ${
+            activeTab == "BusinessHours"
+              ? ` text-BrandPrimary`
+              : `text-BrandGray600 hover:text-BrandPrimary `
+          }`}
+          onClick={() => setActiveTab("BusinessHours")}
+        >
+          Business Hours
+        </span>
+      </div>
+
+      {/* Components */}
+      <div>
+        {activeTab === "Pricing" && <Pricing />}
+        {activeTab === "BusinessHours" && <BussinessHours />}
       </div>
     </>
   );
