@@ -3,6 +3,8 @@ import { conversationData } from "./CommunityData";
 import ChatSideBar from "./ChatSideBar";
 import { useState } from "react";
 import { BiSend } from "react-icons/bi";
+import { MdOutlineAttachment } from "react-icons/md";
+import { BsEmojiSmile } from "react-icons/bs";
 
 const Messages = () => {
   const [conversation, setConversation] = useState(null);
@@ -94,12 +96,16 @@ const Messages = () => {
 
         {/* input box */}
         <div className="px-5 flex items-center h-[42px] justify-between absolute w-full bottom-5">
-          <div className="border border-BrandGray400 p-2 rounded-lg w-[85%]">
+          <div className="border border-BrandGray400 p-2 rounded-lg w-[85%] flex justify-between items-center">
             <input
               type="text"
               placeholder="Write your message"
-              className="outline-none font-ManropeRegular text-[14px] text-BrandGray800"
+              className="outline-none font-ManropeRegular text-[14px] text-BrandGray800 w-[90%]"
             />
+            <div className="flex gap-2 items-center cursor-pointer">
+              <MdOutlineAttachment />
+              <BsEmojiSmile />
+            </div>
           </div>
           <span className="bg-BrandPrimary text-white rounded-lg h-full flex justify-center items-center px-3">
             <BiSend />
