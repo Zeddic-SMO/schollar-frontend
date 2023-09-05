@@ -1,5 +1,5 @@
 import { Plus, Search } from "react-feather";
-import ForumData from "./ForumData";
+import { ForumData } from "./CommunityData";
 import { useState } from "react";
 
 const Forum = () => {

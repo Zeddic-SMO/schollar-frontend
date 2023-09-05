@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { daysOfWeek, thirtyMinutesBooks } from "./AvailabilityData";
 
 const BussinessHours = () => {
   const [enableBusinessHours, SetEnableBusinessHours] = useState(true);
-  const [Availability, setAvailability] = useState({
+  const [availability, setAvailability] = useState({
     Mon: true,
     Tue: true,
     Wed: true,
@@ -12,7 +13,12 @@ const BussinessHours = () => {
     Sun: false,
   });
 
-  const availablityDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const toggleAvailability = (day) => {
+    setAvailability((prevAvailability) => ({
+      ...prevAvailability,
+      [day]: !prevAvailability[day],
+    }));
+  };
   return (
     <>
       {/* Enable Business Hours */}
@@ -51,25 +57,20 @@ const BussinessHours = () => {
       {/* Availability Times */}
       <div className="mb-10 flex">
         {/* Days Section */}
-        <div className="w-[100px]">
-          {availablityDays?.map((day, i) => {
+        <div className="w-[150px] pt-14">
+          {daysOfWeek?.map((day, i) => {
             return (
-              <div key={i} className="flex items-center gap-3 mb-5">
+              <div key={i} className="flex items-center gap-3 mb-10">
                 <span className="w-[30px]">{day}</span>
                 <div
                   className={
                     "w-[38px] h-[18px] rounded-lg p-[2px] bg-BrandGray300 flex justify-start cursor-pointer " +
-                    `${Availability.day && "bg-BrandSecondary justify-end"}`
+                    `${availability[day] && "bg-BrandSecondary justify-end"}`
                   }
                 >
                   <span
                     className="w-[15px] h-full bg-white rounded-full"
-                    onClick={() =>
-                      setAvailability((prevMode) => ({
-                        ...prevMode,
-                        day: !prevMode.day,
-                      }))
-                    }
+                    onClick={() => toggleAvailability(day)}
                   ></span>
                 </div>
               </div>
@@ -78,23 +79,213 @@ const BussinessHours = () => {
         </div>
 
         {/* Time Section */}
-        <div className="w-[500px]">
-          <div className="flex justify-between gap-5">
-            <select
-              name="From"
-              id=""
-              className="w-1/2 outline-none border py-1 px-2 rounded-md"
-            >
-              <option value="09:00AM">09:00AM</option>
-            </select>
+        <div className="w-[600px] border p-5 rounded-lg shadow-lg">
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <label htmlFor="" className="block font-ManropeSemiBold mb-1">
+                From
+              </label>
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
 
-            <select
-              name="From"
-              id=""
-              className="w-1/2 outline-none border py-1 px-2 rounded-md"
-            >
-              <option value="09:00AM">09:00AM</option>
-            </select>
+            {/* To */}
+            <div className="w-1/2 ">
+              <label htmlFor="" className="block font-ManropeSemiBold mb-1">
+                To
+              </label>
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Tuesday */}
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+
+            {/* To */}
+            <div className="w-1/2 ">
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Wednesday */}
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+
+            {/* To */}
+            <div className="w-1/2 ">
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Thursday */}
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+
+            {/* To */}
+            <div className="w-1/2 ">
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Friday */}
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+
+            {/* To */}
+            <div className="w-1/2 ">
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Saturday */}
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+
+            {/* To */}
+            <div className="w-1/2 ">
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Sunday */}
+          <div className="flex justify-between gap-5 mb-6">
+            {/* From */}
+            <div className="w-1/2">
+              <select
+                name="From"
+                id=""
+                className="outline-none border border-BrandGray400 p-2 rounded-md w-full"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
+
+            {/* To */}
+            <div className="w-1/2 ">
+              <select
+                name="From"
+                id=""
+                className="w-full outline-none border border-BrandGray400 p-2 rounded-md"
+              >
+                {thirtyMinutesBooks?.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+            </div>
           </div>
         </div>
       </div>
