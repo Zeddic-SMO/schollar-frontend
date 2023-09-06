@@ -8,6 +8,7 @@ import { BsEmojiSmile } from "react-icons/bs";
 
 const Messages = () => {
   const [conversation, setConversation] = useState(null);
+  const [activeChat, setActiveChat] = useState(null);
   return (
     <div className="flex border rounded-lg border-BrandGray400">
       {/* Chat Sidebar */}
@@ -32,8 +33,13 @@ const Messages = () => {
         {conversationData &&
           conversationData.map((chat) => {
             return (
-              <div key={chat._id}>
-                <ChatSideBar chat={chat} setConversation={setConversation} />
+              <div key={chat.userId}>
+                <ChatSideBar
+                  chat={chat}
+                  setConversation={setConversation}
+                  setActiveChat={setActiveChat}
+                  activeChat={activeChat}
+                />
               </div>
             );
           })}

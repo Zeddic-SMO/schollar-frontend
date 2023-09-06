@@ -1,10 +1,16 @@
 const ChatSideBar = (prop) => {
-  const { chat, setConversation } = prop;
+  const { chat, setConversation, setActiveChat, activeChat } = prop;
 
   return (
     <div
-      className="flex justify-between items-center h-[70px] border-b border-BrandGray400 px-5 cursor-pointer hover:bg-white"
-      onClick={() => setConversation(chat)}
+      className={
+        "flex justify-between items-center h-[70px] border-b border-BrandGray400 px-5 cursor-pointer hover:bg-white " +
+        `${activeChat === chat.userId && "bg-white"}`
+      }
+      onClick={() => {
+        setConversation(chat);
+        setActiveChat(chat.userId);
+      }}
     >
       <div className="flex items-center gap-3">
         <figure>

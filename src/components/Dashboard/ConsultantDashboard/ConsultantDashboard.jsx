@@ -3,7 +3,6 @@ import {
   Calendar,
   Clock,
   CreditCard,
-  Heart,
   Home,
   LogOut,
   MessageSquare,
