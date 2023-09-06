@@ -8,8 +8,8 @@ const SignUp = () => {
   const [open, setOpen] = useState(false);
   return (
     <Template>
-      <div className="md:py-5">
-        <div className="pb-2">
+      <div className="md:py-2">
+        <div className="pb-1">
           <h2 className="text-center font-ManropeBold">I am a:</h2>
           <div className="flex justify-center gap-10 py-2">
             <div className="flex items-center gap-2">
@@ -98,7 +98,8 @@ const SignUp = () => {
               )}
             </span>
           </div>
-          <div className="flex gap-2 py-3">
+          {/* Terms & Conditions */}
+          <div className="flex gap-2 pt-3">
             <input type="checkbox" />
             <label
               htmlFor=""
@@ -107,6 +108,20 @@ const SignUp = () => {
               I agree to the{" "}
               <span className="text-BrandPrimary  underline cursor-pointer">
                 <Link to="">Terms & Conditions</Link>
+              </span>
+            </label>
+          </div>
+
+          {/* Privacy policy */}
+          <div className="flex gap-2 py-3">
+            <input type="checkbox" />
+            <label
+              htmlFor=""
+              className="font-ManropeRegular text-BrandGray700 text-[13px]"
+            >
+              I agree to the{" "}
+              <span className="text-BrandPrimary  underline cursor-pointer">
+                <Link to="">Privacy policy</Link>
               </span>
             </label>
           </div>

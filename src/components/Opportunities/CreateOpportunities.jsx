@@ -62,7 +62,12 @@ const CreateOpportunities = ({ SetOpen }) => {
               id="category"
               className="outline-none border-[1px] rounded-md border-BrandGray400 text-BrandGray700 p-2 w-full"
             >
-              <option value="">Scholarship</option>
+              <option value="Scholarships">Scholarships</option>
+              <option value="Fellowships">Fellowships</option>
+              <option value="Grants">Grants</option>
+              <option value="Events">Events</option>
+              <option value="Jobs">Jobs</option>
+              <option value="Competitions">Competitions</option>
             </select>
           </div>
         </div>
@@ -146,7 +151,7 @@ const CreateOpportunities = ({ SetOpen }) => {
           />
         </div>
 
-        {/* Deadline and category */}
+        {/* Eligibility Region and Benefits */}
         <div className="flex items-center gap-3 pb-4">
           <div className="w-1/2">
             <label
@@ -160,8 +165,11 @@ const CreateOpportunities = ({ SetOpen }) => {
               id="Eligibility_Region"
               className="outline-none border-[1px] rounded-md border-BrandGray400 text-BrandGray700 p-2 w-full"
             >
-              <option value="">America</option>
-              <option value="">Asia</option>
+              <option value="Africa">Africa</option>
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Australia">Australia</option>
+              <option value="Europe">Europe</option>
             </select>
           </div>
 

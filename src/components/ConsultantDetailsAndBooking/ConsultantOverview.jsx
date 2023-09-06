@@ -7,11 +7,14 @@ import { useEffect, useState } from "react";
 import star from "../../assets/media/icons/Home/Consultants/icons/star.png";
 import chat from "../../assets/media/icons/Home/Consultants/icons/circle_chat.png";
 import video from "../../assets/media/icons/Home/Consultants/icons/circle_video.png";
-import { InlineWidget } from "react-calendly";
+// import { InlineWidget } from "react-calendly";
+import { PiChatsBold } from "react-icons/pi";
+import { BiVideo } from "react-icons/bi";
 
 const ConsultantOverview = () => {
   const { consultantId } = useParams();
   const [consultant, setConsultant] = useState(null);
+  const [loginUser, setLoginUser] = useState(false);
 
   useEffect(() => {
     const selectedConsultant = ConsultantsInfo.find(
@@ -56,7 +59,21 @@ const ConsultantOverview = () => {
         {/* Consultant Details */}
         <div className="flex mt-12 gap-10">
           <div className="w-[250px]">
-            <img src={consultant?.pic} alt={consultant?.name} />
+            <div className="relative">
+              <img src={consultant?.pic} alt={consultant?.name} />
+              <div className="w-full flex items-center justify-center gap-3 absolute bottom-5">
+                <span className="bg-BrandPrimary text-white p-2 rounded-lg cursor-pointer hover:bg-white hover:text-BrandGray900">
+                  <Link to={loginUser ? "/" : "/signin"}>
+                    <PiChatsBold size={20} />
+                  </Link>
+                </span>
+                <span className="bg-BrandPrimary text-white p-2 rounded-lg cursor-pointer hover:bg-white hover:text-BrandGray900">
+                  <Link to={loginUser ? "/" : "/signin"}>
+                    <BiVideo size={20} />
+                  </Link>
+                </span>
+              </div>
+            </div>
             <h5 className="text-center text-[18px] font-ManropeSemiBold py-3 text-BrandGray900">
               {consultant?.name}
             </h5>
@@ -71,12 +88,35 @@ const ConsultantOverview = () => {
             <p className="flex items-center justify-center gap-2">
               <MapPin size={20} className="text-BrandPrimary" />{" "}
               <span className="font-ManropeSemiBold text-BrandGray900">
-                {" "}
                 {consultant?.location}
               </span>
             </p>
           </div>
+
           <div className="w-full">
+            {/* Bio */}
+            <div>
+              <h3 className="font-ManropeBold text-BrandPrimary text-[20px]">
+                Bio
+              </h3>
+              <div className="pt-5 pb-10 font-ManropeRegular text-[14px]">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                quo sequi fuga numquam laudantium sit itaque, dicta velit?
+                Dolorum sint laudantium tempore reiciendis voluptatem officia
+                corporis, omnis harum. Ab quia praesentium aperiam sed atque!
+                Qui, cumque magni explicabo error deleniti autem consequatur vel
+                dolorem veniam quia itaque necessitatibus dolores, voluptas
+                alias! Labore dolores placeat, rem officia aspernatur sit!
+                Provident ex eligendi incidunt hic voluptatem modi optio magnam
+                nulla, in asperiores rem fuga iusto labore est laboriosam
+                exercitationem culpa maiores ad possimus eos reiciendis
+                similique tenetur perspiciatis ipsa. Odit non, distinctio
+                debitis fugit provident consequatur, optio dolores, reiciendis
+                ea cum a!
+              </div>
+            </div>
+
+            {/* Specialization */}
             <div>
               <h3 className="font-ManropeBold text-BrandPrimary text-[20px]">
                 Specialization
@@ -94,7 +134,10 @@ const ConsultantOverview = () => {
                 })}
               </div>
             </div>
+
             <hr className="border-[1px] bg-BrandGray300 my-5" />
+
+            {/* Services and Charges */}
             <div>
               <h3 className="font-ManropeBold text-BrandPrimary text-[20px]">
                 Services
@@ -137,7 +180,7 @@ const ConsultantOverview = () => {
         <hr className="border-[1px] bg-BrandGray300 my-5" />
 
         {/* Booking Section */}
-        <div>
+        {/* <div>
           <h3 className="font-ManropeBold text-BrandPrimary text-[20px]">
             Book Consultation
           </h3>
@@ -166,7 +209,7 @@ const ConsultantOverview = () => {
           </button>
         </div>
 
-        <hr className="border-[1px] bg-BrandGray300 my-5" />
+        <hr className="border-[1px] bg-BrandGray300 my-5" /> */}
 
         {/* Reviews */}
         <div>

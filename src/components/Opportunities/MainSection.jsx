@@ -1,7 +1,11 @@
 import { opportunitiesItems } from "./OpportunitiesData";
 import tag from "../../assets/media/images/opportunities/tag.png";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const MainSection = () => {
+  const [loginUser, setLoginUser] = useState(false);
+
   const tagDecoration = (tagName) => {
     if (tagName == "Travel") {
       return `bg-[#4C82F7] text-white`;
@@ -44,9 +48,16 @@ const MainSection = () => {
                   <p className="font-ManropeRegular text-[15px] text-BrandGray700 pb-5">
                     {item.text}
                   </p>
-                  <span className="font-ManropeRegular text-[13px]">
-                    {item.date}
-                  </span>
+                  <div className="flex justify-between items-center">
+                    <span className="font-ManropeRegular text-[13px]">
+                      {item.date}
+                    </span>
+                    <Link to={loginUser ? "/" : "/signin"}>
+                      <button className="bg-BrandGray800 text-white px-2 py-1 rounded-lg shadow-md text-[14px] hover:bg-BrandGray600 hover:text-BrandGray900">
+                        See More
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -70,7 +81,14 @@ const MainSection = () => {
                 <p className="font-ManropeRegular text-[15px] text-BrandGray700">
                   {item.text2}
                 </p>
-                <span>{item.date2}</span>
+                <div className="flex justify-between items-center">
+                  <span>{item.date2}</span>
+                  <Link to={loginUser ? "/" : "/signin"}>
+                    <button className="bg-BrandGray800 text-white px-2 py-1 rounded-lg shadow-md text-[14px] hover:bg-BrandGray600 hover:text-BrandGray900">
+                      See More
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           );

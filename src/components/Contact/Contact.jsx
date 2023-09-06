@@ -8,6 +8,9 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+  PhoneCall,
+  Mail,
+  MapPin,
 } from "react-feather";
 
 const Contact = () => {
@@ -41,7 +44,35 @@ const Contact = () => {
             >
               Let's talk!
             </h1>
-            <div className="flex gap-2 pt-5">
+            <div className="py-5">
+              <p className="flex items-center gap-2">
+                <span>
+                  <PhoneCall size={14} className="text-BrandPrimary" />
+                </span>
+                <span className="text-[14px] font-ManropeRegular text-BrandGray800">
+                  (406) 555-0120
+                </span>
+              </p>
+
+              <p className="flex items-center gap-2 py-2">
+                <span>
+                  <Mail size={14} className="text-BrandPrimary" />
+                </span>
+                <span className="text-[14px] font-ManropeRegular text-BrandGray800">
+                  example@gmail.com
+                </span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span>
+                  <MapPin size={14} className="text-BrandPrimary" />
+                </span>
+                <span className="text-[14px] font-ManropeRegular text-BrandGray800">
+                  2464 Royal Ln. Mesa,New Jersey 45463
+                </span>
+              </p>
+            </div>
+            {/* Socials */}
+            <div className="flex gap-2">
               <span className="bg-BrandGray300 p-1 md:p-2 cursor-pointer rounded-md border-[1px] border-BrandGray600 hover:bg-BrandPrimary hover:text-white">
                 <Facebook size="15px" />
               </span>
