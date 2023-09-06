@@ -1,38 +1,30 @@
-import { Link } from "react-router-dom";
 import Header from "../Navigation/Header";
-import { Home } from "react-feather";
 
 const ForgotPassword = () => {
   return (
     <>
       <Header />
-      <div className="bg-[#f3effe] px-10 md:px-40 py-20 relative">
-        <div className="flex justify-center">
-          <div className="text-center">
-            <div>
+      <div className="bg-[#f3effe]">
+        <div className="px-10 md:px-40 py-20 relative h-[500px]">
+          <div className="flex justify-center items-center mt-[100px]">
+            <div className="flex border border-[#f3effe] rounded-lg h-[45px] w-[400px] bg-white overflow-hidden shadow-lg">
               <input
                 type="text"
                 placeholder="Enter your email address"
-                className="outline-none"
+                className="outline-none w-[90%] bg-transparent h-full px-5"
               />
-              <button>Submit</button>
-            </div>
-            <div className="flex justify-center">
-              <Link to="/">
-                <button className="bg-BrandPrimary flex p-3 rounded-lg gap-2 text-white my-5">
-                  <Home />
-                  Go to homepage
-                </button>
-              </Link>
+              <button className="bg-BrandPrimary px-3 text-white h-full">
+                Submit
+              </button>
             </div>
           </div>
         </div>
-        <div className="text-[12px] absolute bottom-2 text-BrandGray600 font-ManropeRegular ">
-          <p className="text-center">
-            {new Date().getFullYear()}. All rights reserved. Schollar.net.
-            Powered By Maxify Global
-          </p>
-        </div>
+      </div>
+      <div className="text-[12px] absolute bottom-2 w-full text-BrandGray600 font-ManropeRegular">
+        <p className="flex justify-center">
+          {new Date().getFullYear()}. All rights reserved. Schollar.net. Powered
+          By Maxify Global
+        </p>
       </div>
     </>
   );

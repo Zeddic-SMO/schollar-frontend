@@ -59,7 +59,7 @@ const SignIn = () => {
             Sign in
           </button>
           <p className="font-ManropeSemiBold text-BrandPrimary text-center py-4 text-[13px]">
-            Forgot your password?
+            <Link to="/forgot_password">Forgot your password?</Link>
           </p>
           <hr />
           <p className="font-ManropeExtraBold text-center text-BrandGray900 py-3 text-[13px]">

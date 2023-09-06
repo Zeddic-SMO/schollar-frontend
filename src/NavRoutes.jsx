@@ -11,6 +11,7 @@ import Opportunities from "./components/Opportunities/Opportunities";
 import ConsultantOverview from "./components/ConsultantDetailsAndBooking/ConsultantOverview";
 import ConsultantDashboard from "./components/Dashboard/ConsultantDashboard/ConsultantDashboard";
 import SchollarDashboard from "./components/Dashboard/ScholarDashboard/SchollarDashboard";
+import ForgotPassword from "./components/Authentication/ForgotPassword";
 
 const NavRoutes = () => {
   return (
@@ -20,6 +21,9 @@ const NavRoutes = () => {
       {/* Authentication Routes */}
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
+
+      {/* Forgot Password */}
+      <Route path="/forgot_password" element={<ForgotPassword />} />
 
       {/* contact page */}
       <Route path="/contact" element={<Contact />} />
